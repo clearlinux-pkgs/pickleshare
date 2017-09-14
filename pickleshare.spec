@@ -4,7 +4,7 @@
 #
 Name     : pickleshare
 Version  : 0.7.4
-Release  : 6
+Release  : 7
 URL      : http://pypi.debian.net/pickleshare/pickleshare-0.7.4.tar.gz
 Source0  : http://pypi.debian.net/pickleshare/pickleshare-0.7.4.tar.gz
 Summary  : Tiny 'shelve'-like database with concurrency support
@@ -51,12 +51,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1505055603
+export SOURCE_DATE_EPOCH=1505405509
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1505055603
+export SOURCE_DATE_EPOCH=1505405509
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
