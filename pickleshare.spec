@@ -4,7 +4,7 @@
 #
 Name     : pickleshare
 Version  : 0.7.4
-Release  : 10
+Release  : 11
 URL      : http://pypi.debian.net/pickleshare/pickleshare-0.7.4.tar.gz
 Source0  : http://pypi.debian.net/pickleshare/pickleshare-0.7.4.tar.gz
 Summary  : Tiny 'shelve'-like database with concurrency support
