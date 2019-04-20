@@ -4,7 +4,7 @@
 #
 Name     : pickleshare
 Version  : 0.7.5
-Release  : 22
+Release  : 23
 URL      : https://files.pythonhosted.org/packages/d8/b6/df3c1c9b616e9c0edbc4fbab6ddd09df9535849c64ba51fcb6531c32d4d8/pickleshare-0.7.5.tar.gz
 Source0  : https://files.pythonhosted.org/packages/d8/b6/df3c1c9b616e9c0edbc4fbab6ddd09df9535849c64ba51fcb6531c32d4d8/pickleshare-0.7.5.tar.gz
 Summary  : Tiny 'shelve'-like database with concurrency support
