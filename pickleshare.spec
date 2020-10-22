@@ -4,7 +4,7 @@
 #
 Name     : pickleshare
 Version  : 0.7.5
-Release  : 30
+Release  : 31
 URL      : https://files.pythonhosted.org/packages/d8/b6/df3c1c9b616e9c0edbc4fbab6ddd09df9535849c64ba51fcb6531c32d4d8/pickleshare-0.7.5.tar.gz
 Source0  : https://files.pythonhosted.org/packages/d8/b6/df3c1c9b616e9c0edbc4fbab6ddd09df9535849c64ba51fcb6531c32d4d8/pickleshare-0.7.5.tar.gz
 Summary  : Tiny 'shelve'-like database with concurrency support
@@ -18,10 +18,12 @@ BuildRequires : buildreq-distutils3
 BuildRequires : pathlib2
 
 %description
-PickleShare - a small 'shelve' like datastore with concurrency support
 Like shelve, a PickleShareDB object acts like a normal dictionary. Unlike shelve,
-many processes can access the database simultaneously. Changing a value in
-database is immediately visible to other processes accessing the same database.
+        many processes can access the database simultaneously. Changing a value in 
+        database is immediately visible to other processes accessing the same database.
+        
+        Concurrency is possible because the values are stored in separate files. Hence
+        the "database" is a directory where *all* files are governed by PickleShare.
 
 %package license
 Summary: license components for the pickleshare package.
@@ -59,12 +61,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1583202022
-# -Werror is for werrorists
+export SOURCE_DATE_EPOCH=1603398426
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
-export FCFLAGS="$CFLAGS -fno-lto "
-export FFLAGS="$CFLAGS -fno-lto "
+export FCFLAGS="$FFLAGS -fno-lto "
+export FFLAGS="$FFLAGS -fno-lto "
 export CXXFLAGS="$CXXFLAGS -fno-lto "
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
